@@ -244,24 +244,24 @@ Session = sessionmaker(bind=engine)
 
 session = Session()
 
-for caregiver in caregivers:
-    session.add(caregiver)
-    session.commit()
+# for caregiver in caregivers:
+#     session.add(caregiver)
+#     session.commit()
 
-for member in members:
-    session.add(member)
-    session.commit()
+# for member in members:
+#     session.add(member)
+#     session.commit()
 
-for job in jobs:
-    session.add(job)
-    session.commit()
+# for job in jobs:
+#     session.add(job)
+#     session.commit()
 
-for job_application in job_applications:
-    session.add(job_application)
-    session.commit()
+# for job_application in job_applications:
+#     session.add(job_application)
+#     session.commit()
 
-for appointment in appointments:
-    session.add(appointment)
-    session.commit()
+# for appointment in appointments:
+#     session.add(appointment)
+#     session.commit()
 
 print('hello world')
