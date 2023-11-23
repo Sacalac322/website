@@ -1,9 +1,17 @@
+import os
 from sqlalchemy import create_engine, Float, Boolean, Date, MetaData, Table, Integer, String, Column, Text, Time, PrimaryKeyConstraint, ForeignKey, func
 from sqlalchemy.orm import relationship, sessionmaker
 from sqlalchemy.ext.declarative import declarative_base
 
 Base = declarative_base()
-engine = create_engine("postgresql://dastan_kozhabayev_user:AtJXi5HSXtNtTceWZMtOEFXpfbJKQSFp@dpg-clfmj3vjc5ks73e8knt0-a.frankfurt-postgres.render.com/dastan_kozhabayev", echo=False)
+engine = create_engine(os.environ.get('DATABASE_URL'))
+# mysql+mysqlconnector://root:sacalac2002@localhost:3306/db
+
+# internal
+# postgres://dastan_kozhabayev_tlb7_user:cxfNP28minTNVy4jsCEqLYd4gf9NoKsX@dpg-clfnap6g1b2c73a2o9c0-a/dastan_kozhabayev_tlb7
+
+# external
+# postgresql://dastan_kozhabayev_tlb7_user:cxfNP28minTNVy4jsCEqLYd4gf9NoKsX@dpg-clfnap6g1b2c73a2o9c0-a.oregon-postgres.render.com/dastan_kozhabayev_tlb7
 
 class User(Base):
     __tablename__ = 'USER'
@@ -256,4 +264,4 @@ session = Session()
 #     session.add(appointment)
 #     session.commit()
 
-# print('hello world')
+print('hello world')
