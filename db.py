@@ -3,7 +3,7 @@ from sqlalchemy.orm import relationship, sessionmaker
 from sqlalchemy.ext.declarative import declarative_base
 
 Base = declarative_base()
-engine = create_engine("mysql+mysqlconnector://root:sacalac2002@localhost:3306/db", echo=True)
+engine = create_engine("postgresql://dastan_kozhabayev_user:AtJXi5HSXtNtTceWZMtOEFXpfbJKQSFp@dpg-clfmj3vjc5ks73e8knt0-a.frankfurt-postgres.render.com/dastan_kozhabayev", echo=False)
 
 class User(Base):
     __tablename__ = 'USER'
