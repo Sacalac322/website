@@ -2,7 +2,7 @@ import os
 from sqlalchemy import create_engine, Float, Boolean, Date, MetaData, Table, Integer, String, Column, Text, Time, PrimaryKeyConstraint, ForeignKey, func
 from sqlalchemy.orm import relationship, sessionmaker
 from sqlalchemy.ext.declarative import declarative_base
-DATABASE_URL = 'postgresql://dastan_kozhabayev_azgf_user:k1HEsvBm6UdbVohp9pjOOup4qasHD4c4@dpg-clfo12l8td7s73bbnjig-a.frankfurt-postgres.render.com/dastan_kozhabayev_azgf'
+DATABASE_URL = 'postgresql://dastan_kozhabayev_cui9_user:lopdVbt9gXQsqaqrGyRsfEuGnskITWdS@dpg-clfog0o3nsgc73e848v0-a.frankfurt-postgres.render.com/dastan_kozhabayev_cui9'
 Base = declarative_base()
 engine = create_engine(DATABASE_URL)
 # mysql+mysqlconnector://root:sacalac2002@localhost:3306/db
