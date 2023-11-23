@@ -1,0 +1,24 @@
+{%extends 'base.html'%}
+
+{%block title%} Main page {%endblock%}
+{%block body%}
+
+<div class='container mt-5'>
+    <h1> All users </h1>
+    {%for user in users%}
+        <div class='alert alert-info'>
+            <p> <b> Name: {{user.given_name}} </b> </p>
+            <p> <b> Surname: {{user.surname}} </b> </p>
+            <p> <b> ID: {{user.user_id}} </b> </p>
+            <p> Phone number: {{user.phone_number}} </p>
+            <p> City: {{user.city}} </p>
+            <p> Profile description: {{user.profile_description}} </p>
+            <a href='info/{{user.user_id}}' class='btn btn-primary'> More Info </a>
+            <a href='edit/{{user.user_id}}' class='btn btn-warning'> Edit concrete user </a>
+            <a href='info/{{user.user_id}}/delete' class='btn btn-danger'> Delete concrete user </a>
+        </div>
+    {%endfor%}
+</div>
+
+{%endblock%}
+
