@@ -2,7 +2,7 @@ import os
 from sqlalchemy import create_engine, Float, Boolean, Date, MetaData, Table, Integer, String, Column, Text, Time, PrimaryKeyConstraint, ForeignKey, func
 from sqlalchemy.orm import relationship, sessionmaker
 from sqlalchemy.ext.declarative import declarative_base
-DATABASE_URL = 'postgresql://dastan_kozhabayev_tlb7_user:cxfNP28minTNVy4jsCEqLYd4gf9NoKsX@dpg-clfnap6g1b2c73a2o9c0-a.oregon-postgres.render.com/dastan_kozhabayev_tlb7'
+DATABASE_URL = 'postgres://dastan_kozhabayev_azgf_user:k1HEsvBm6UdbVohp9pjOOup4qasHD4c4@dpg-clfo12l8td7s73bbnjig-a.frankfurt-postgres.render.com/dastan_kozhabayev_azgf'
 Base = declarative_base()
 engine = create_engine(DATABASE_URL)
 # mysql+mysqlconnector://root:sacalac2002@localhost:3306/db
@@ -244,24 +244,24 @@ Session = sessionmaker(bind=engine)
 
 session = Session()
 
-# for caregiver in caregivers:
-#     session.add(caregiver)
-#     session.commit()
+ for caregiver in caregivers:
+     session.add(caregiver)
+     session.commit()
 
-# for member in members:
-#     session.add(member)
-#     session.commit()
+ for member in members:
+     session.add(member)
+     session.commit()
 
-# for job in jobs:
-#     session.add(job)
-#     session.commit()
+ for job in jobs:
+     session.add(job)
+     session.commit()
 
-# for job_application in job_applications:
-#     session.add(job_application)
-#     session.commit()
+ for job_application in job_applications:
+     session.add(job_application)
+     session.commit()
 
-# for appointment in appointments:
-#     session.add(appointment)
-#     session.commit()
+ for appointment in appointments:
+     session.add(appointment)
+     session.commit()
 
 print('hello world')
