@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+
+{%block title%} Edit Member {%endblock%}
+
+{%block body%}
+
+
+<div class='container mt-5'>
+    <h1>Edit the given Member</h1>
+
+    <form method='post'> 
+        <h2> Edit User information </h2>
+        <label for="gender">Name:</label><br>
+        <input type='text' name='given_name' id='given_name' value = {{user.given_name}} class='form-control' placeholder='Enter a name'><br>
+        <label for="gender">Surname:</label><br>
+        <input type='text' name='surname' id='surname' value = {{user.surname}} class='form-control' placeholder='Enter a surname'><br>
+        <label for="gender">Email:</label><br>
+        <input type='text' name='email' id='email' value = {{user.email}} class='form-control' placeholder='Enter an email'><br>
+        <label for="gender">City:</label><br>
+        <input type='text' name='city' id='city' value = {{user.city}} class='form-control' placeholder='Enter a city'><br>
+        <label for="gender">Phone number:</label><br>
+        <input type='text' name='phone_number' value = {{user.phone_number}} id='phone_number' class='form-control' placeholder='Enter a phone number'><br>
+        <label for="gender">Profile description:</label><br>
+        <input type='text' name='profile_description' value = {{user.profile_description}} id='profile_description' class='form-control' placeholder='Enter a profile description'><br>
+        <label for="gender">Password:</label><br>
+        <input type='text' name='password' id='password' value = {{user.password}} class='form-control' placeholder='Enter a password'><br>
+
+        <h2> Edit Member information </h2>
+        <label for="gender">House rules:</label><br>
+        <input type='text' name='house_rules' id='house_rules' value = {{member.house_rules}} class='form-control' placeholder='Enter house rules'><br>
+
+        <h2> Edit Address information </h2>
+        <label for="gender">House number:</label><br>
+        <input type='text' name='house_number' id='house_number' value = {{address.house_number}} class='form-control' placeholder='Enter a house number'><br>
+        <label for="gender">Street:</label><br>
+        <input type='text' name='street' id='street' value = {{address.street}} class='form-control' placeholder='Enter a street'><br>
+        <label for="gender">Town:</label><br>
+        <input type='text' name='town' id='town' value = {{address.town}} class='form-control' placeholder='Enter a town'><br>
+
+
+        <h2> Edit posted job </h2>
+        <label for="required_caregiving_type">Required caregiving type:</label><br>
+        <input type='text' name='required_caregiving_type' id='required_caregiving_type'  class='form-control' placeholder='Enter a caregiving type'><br>
+        <label for="gender">Other requirements:</label><br>
+        <input type='text' name='other_requirements' id='other_requirements'  class='form-control' placeholder='Enter a other requirements' ><br>
+
+        <input type='submit' class='btn btn-warning' value='Edit member'><br>
+    </form>
+
+</div>
+{%endblock%}

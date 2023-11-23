@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+
+{%block title%} Edit Caregiver {%endblock%}
+
+{%block body%}
+
+
+<div class='container mt-5'>
+    <h1>Edit the given Caregiver</h1>
+
+    <form method='post'> 
+        <h2> Edit User information </h2>
+        <label for="gender">Name:</label><br>
+        <input type='text' name='given_name' id='given_name' value = {{user.given_name}} class='form-control' placeholder='Enter a name'><br>
+        <label for="gender">Surname:</label><br>
+        <input type='text' name='surname' id='surname' value = {{user.surname}} class='form-control' placeholder='Enter a surname'><br>
+        <label for="gender">Email:</label><br>
+        <input type='text' name='email' id='email' value = {{user.email}} class='form-control' placeholder='Enter an email'><br>
+        <label for="gender">City:</label><br>
+        <input type='text' name='city' id='city' value = {{user.city}} class='form-control' placeholder='Enter a city'><br>
+        <label for="gender">Phone number:</label><br>
+        <input type='text' name='phone_number' value = {{user.phone_number}} id='phone_number' class='form-control' placeholder='Enter a phone number'><br>
+        <label for="gender">Profile description:</label><br>
+        <input type='text' name='profile_description' value = {{user.profile_description}} id='profile_description' class='form-control' placeholder='Enter a profile description'><br>
+        <label for="gender">Password:</label><br>
+        <input type='text' name='password' id='password' value = {{user.password}} class='form-control' placeholder='Enter a password'><br>
+
+        <h2> Edit Caregiver information </h2>
+        <label for="gender">Gender:</label><br>
+        <select name="gender" id='gender' class='form-control'>
+            <option value="M">Male</option>
+            <option value="F">Female</option>
+        </select><br>
+        <label for="caregiving type">Caregiving type:</label><br>
+        <select name="caregiving_type" id='caregiving_type' class='form-control'>
+            <option value="babysitter">Babysitter</option>
+            <option value="caregiver for elderly people">Caregiver for elderly</option>
+            <option value="playmate for children">Playmate for children</option>
+        </select><br>
+        <label for="rate">Hourly rate:</label><br>
+        <input type='text' name='hourly_rate' id='hourly_rate' value = {{caregiver.hourly_rate}} class='form-control' placeholder='Enter an hourly_rate'><br>
+
+        <input type='submit' class='btn btn-warning' value='Edit caregiver'><br>
+    </form>
+
+</div>
+{%endblock%}
